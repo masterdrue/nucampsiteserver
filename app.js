@@ -30,6 +30,19 @@ app.use('/campsites', campsiteRouter);
 app.use('/promotions', promotionRouter);
 app.use('/partners', partnerRouter);
 
+const mongoose = require('mongoose');
+
+const url = 'mongodb://localhost:27017/nucampsite';
+const connect = mongoose.connect(url, {
+  useCreateIndex: true,
+  useFindAndModify: false,
+  useNewUrlParser: true, 
+  useUnifiedTopology: true
+});
+
+connect.then(() => console.log('Connected correctly to server'), 
+    err => console.log(err)
+);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

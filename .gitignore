@@ -1,2 +1,2 @@
 node_modules
-routes/campsiteRouter-src.js
+routes/*-src.js

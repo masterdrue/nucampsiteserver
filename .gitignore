@@ -2,3 +2,5 @@ node_modules
 routes/*-src.js
 *-src.js
 github.txt
+public/index.html
+config.js
